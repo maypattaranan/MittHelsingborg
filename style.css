@@ -1,0 +1,377 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Scroll to section*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  font-family: Lato;
+}
+
+svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+#flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 3em;
+  height: 10vh;
+}
+
+.logo-a {
+  padding: 0 4em;
+}
+
+/* <!-- Navigation bar --> */
+#navigation {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  gap: 0 4rem;
+}
+
+#navigation a {
+  text-decoration: none;
+  /* display: block; */
+  color: #000;
+}
+
+#navigation a:hover {
+  background: none;
+}
+
+/* <!-- Hero Section --> */
+#hero {
+  background-image: url("./resource/hbg4.jpg");
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 80%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 30%;
+  height: inherit;
+  flex-direction: column;
+  padding: 1em 5em;
+}
+
+.hero-container p {
+  color: #333;
+  line-height: 1.5em;
+}
+
+/* Take a tour button */
+#tourbutton {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+}
+
+#tourbutton:focus-visible {
+  box-shadow: 0 0 0 3px blue;
+}
+
+#tourbutton:hover {
+  border: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* <!-- Chevron click down button --> */
+.chevron-container {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50% );
+}
+
+.chevron-container a {
+  color: #000;
+}
+
+.chevron-icon {
+  font-size: 2.5rem;
+  animation: pulse 1.5s infinite;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* <!-- Tour Section --> */
+#tour {
+  height: 100vh;
+  text-align: center;
+}
+
+#tour h1 {
+  padding: 3rem;
+}
+
+#grid-tour-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.grid-tour-item {
+  transition: transform 0.3s;
+}
+
+.grid-tour-item:hover {
+  transform: scale(1.1);
+}
+
+.grid-tour-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid-tour-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  float: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  margin: 1px 0 0 0;
+}
+
+.grid-tour-item p {
+  padding: 0 3rem;
+  line-height: 1.5em;
+}
+
+.grid-tour-item h2 {
+  padding: 2rem 3rem;
+}
+
+/* Back To Top */
+#back-to-top-container {
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
+  background-color: #333;
+  border-radius: 50px;
+  color: #fff;
+  transition: all 0.35s ease;
+}
+
+#back-to-top-button {
+  all: unset;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Landmarks */
+#grid-landmarks-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+ */
+  height: 90vh;
+}
+
+.grid-landmarks-item {
+  display: flex;
+  grid-template-columns: auto;
+  background-color: aqua;
+  height: 90vh;
+  gap: 10px;
+  margin: 0 2rem;
+  border-radius: 1%;
+  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Restaurants */
+#grid-restaurants-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 0 5rem;
+  height: 90vh;
+}
+
+.grid-restaurants-item {
+  display: flex;
+  grid-template-columns: auto auto;
+  margin: 0;
+  padding: 0;
+  height: 40vh;
+  background-color: #fff;
+  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.grid-restaurants-item img {
+  width: inherit;
+  height: 40vh;
+  object-fit: cover;
+  display: inherit;
+}
+
+.grid-restaurants-content h2 {
+  padding: 5rem 3rem 2rem 3rem;
+  
+}
+
+.grid-restaurants-content p {
+  padding: 1rem 3rem;
+  max-height: 180px;
+}
+
+.grid-restaurants-content .icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 3rem;
+}
+
+#restaurants h1,
+#landmarks h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-weight: bold;
+  color: #000;
+  font-family: "Dancing Script";
+  height: 10vh;
+}
+
+a.restaurant {
+  color: inherit;
+  font-weight: 900;
+  text-underline-offset: -0.4em;
+  text-decoration-thickness: 0.3em;
+  text-decoration-skip-ink: none;
+  text-decoration-style: wavy;
+  text-decoration-color: pink;
+}
+
+a.restaurant:hover {
+  text-underline-offset: -0.4em;
+  text-decoration-thickness: 0.25em;
+}
+
+/* Coffee */
+
+/* Slideshow */
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+  }
+  
+  .thumb {
+    height:140px;
+    width:210px;
+    top:136px;
+    left:12px;
+    position:relative;
+    background-size:contain;
+    box-shadow:-12px 0 0 12px #000;
+  }
+  .thumb:last-of-type {
+    box-shadow:0 0 0 12px #000;
+  }
+  .thumb:after {
+    content:attr(title);
+    font:normal normal 20pt 'impact';
+    position:relative;
+  }
+  .thumb:hover {
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
+    filter: grayscale(80%);
+    filter: url(grayscale.svg#greyscale);
+    filter: gray;
+  }
+  @-webkit-keyframes TMNT {
+    0%  { left: 0px; }
+    100% { left: -1200px; }
+  }
+  a.prev,a.next {
+    height:91px;
+    position:absolute;
+    width:43px;
+    top:50%;
+    margin-top:-30px;
+    opacity:0.6;
+    text-indent:-99999px;
+    cursor:pointer;
+    -webkit-transition:opacity 200ms ease-out;
+  }
+  a.prev:hover,a.next:hover {
+    opacity:1;
+  }
+  .prev {
+    left:0;
+    background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
+  }
+  .next {
+    right:0;
+    background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;
+  }
+  .slider {
+    height:100vh;
+    position: relative;
+  }
+  .slide {
+    position:absolute;
+    height:100%;
+    width:100%;
+  }
+  .slider .slide:target {
+    z-index: 100;
+  }
+  img .slider {
+    max-width:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+  }
